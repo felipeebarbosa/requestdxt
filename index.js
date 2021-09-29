@@ -13,7 +13,7 @@ app.get('/', async(req, res)  =>{
     var number = Math.random() * (1000 - 1) + 1
 
     const browser = await puppeteer.launch({
-        headless : false,
+        headless : true,
     });
     const page = await browser.newPage();
     await page.goto('https://cuidandojuntos.duratex.com.br/dashboard');
